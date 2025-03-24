@@ -1,0 +1,136 @@
+100 PyTorch questions ranging from beginner to advanced levels, covering all major concepts in PyTorch.  
+
+---
+
+### **Beginner Level (20 Questions)**
+
+1. What is PyTorch, and how is it different from TensorFlow?
+2. How do you install PyTorch on your system?
+
+3. What is a PyTorch `Tensor`, and how is it different from a NumPy array?
+it supports gpu execution, also  supports automatic differentiation and it is deeply embedded into neural networks of pytorch
+
+4. Write a code snippet to create a 3x3 PyTorch tensor with random values.
+th.random.randn((3, 3))
+
+5. How do you check if PyTorch is using a GPU?
+th.cuda.is_available()
+
+6. What is `torch.device`, and how do you move a tensor to GPU?
+torch.device indicates where the tensor is executing, gpu or cpu. to move we use .to("cuda")
+
+7. What is the purpose of `torch.manual_seed(42)`?
+to set the random number generation
+
+8. How can you convert a NumPy array to a PyTorch tensor and vice versa?
+th.from_numpy(x)
+
+9. Explain the difference between `torch.zeros()`, `torch.ones()`, and `torch.rand()`.
+
+10. What is `requires_grad` in PyTorch tensors, and when would you use it?
+it sets the tensor for differentiation
+
+11. Write a function to perform element-wise addition of two PyTorch tensors.
+
+12. What does `tensor.view()` do, and how is it different from `tensor.reshape()`?
+
+13. What does `tensor.detach()` do, and why is it useful?
+14. How can you clone a PyTorch tensor without affecting the original tensor?
+15. Explain the purpose of `torch.stack()` and `torch.cat()`.
+16. How do you save and load a PyTorch tensor to disk?
+17. What is `dtype` in PyTorch, and how do you change a tensor's dtype?
+18. Explain broadcasting in PyTorch with an example.
+19. Write a function to compute the mean and standard deviation of a PyTorch tensor.
+20. What does `torch.from_numpy()` do?
+
+---
+
+### **Intermediate Level (30 Questions)**
+21. What is an autograd in PyTorch, and how does it work?
+22. Explain the difference between `requires_grad=True` and `requires_grad=False`.
+23. How do you compute gradients in PyTorch using `backward()`?
+24. What is `torch.no_grad()`, and when should you use it?
+25. Write a simple PyTorch script to compute the derivative of `y = x^2` at `x=2`.
+26. What is the purpose of `torch.optim` in PyTorch?
+27. Explain the difference between `SGD`, `Adam`, and `RMSprop` optimizers in PyTorch.
+28. What is a PyTorch `Dataset`, and how does it help in handling data?
+29. How do you create a custom PyTorch dataset using `torch.utils.data.Dataset`?
+30. What is a `DataLoader`, and how does it help in training models?
+31. Explain `shuffle=True` in `DataLoader`.
+32. How do you perform batch processing using PyTorch `DataLoader`?
+33. What is `collate_fn` in PyTorch `DataLoader`?
+34. How do you load an image dataset using PyTorch?
+35. Write a simple neural network in PyTorch using `nn.Module`.
+36. Explain the role of `forward()` in `nn.Module`.
+37. What is the difference between `nn.Linear` and `nn.Conv2d`?
+38. How does dropout work in PyTorch, and why is it useful?
+39. What is batch normalization, and how do you use it in PyTorch?
+40. How do you calculate loss using `nn.CrossEntropyLoss()`?
+41. What is the difference between `model.eval()` and `model.train()`?
+42. What is `torch.nn.functional`, and how is it different from `torch.nn`?
+43. What is the purpose of `torch.save()` and `torch.load()`?
+44. How do you save and load a PyTorch model checkpoint?
+45. What is a pre-trained model, and how do you load one using `torchvision.models`?
+46. How do you fine-tune a pre-trained model in PyTorch?
+47. How do you freeze model layers in PyTorch?
+48. What is `grad_clip`, and when is it used?
+49. What is Mixed Precision Training, and how is it implemented in PyTorch?
+50. Explain what `autocast()` does in PyTorch AMP.
+
+---
+
+### **Advanced Level (50 Questions)**
+51. What is PyTorch's `DistributedDataParallel (DDP)`?
+52. How do you train a model using multiple GPUs in PyTorch?
+53. Explain the difference between `DataParallel` and `DistributedDataParallel`.
+54. How do you implement `torch.distributed.launch` for multi-GPU training?
+55. What is `torch.multiprocessing`, and how is it used in PyTorch?
+56. What is `torch.nn.parallel`, and when should you use it?
+57. How do you implement custom loss functions in PyTorch?
+58. How do you calculate the Jacobian of a function using PyTorch?
+59. What is a PyTorch Hook, and how do you use it for debugging?
+60. What is the role of `register_backward_hook()` and `register_forward_hook()`?
+61. How do you visualize computation graphs in PyTorch?
+62. What is `torch.fx`, and how does it help in model optimization?
+63. What is quantization in PyTorch, and how do you implement it?
+64. How does `torch.jit` help in optimizing PyTorch models for deployment?
+65. What is TorchScript, and how do you convert a model to TorchScript?
+66. Explain the difference between `torch.jit.trace()` and `torch.jit.script()`.
+67. How do you use PyTorch for Reinforcement Learning?
+68. What is `torch.autograd.gradcheck()`, and why is it important?
+69. What is a GAN (Generative Adversarial Network), and how do you implement one in PyTorch?
+70. How do you implement a Transformer model using PyTorch?
+71. Explain the role of `torchtext` in Natural Language Processing with PyTorch.
+72. How do you use PyTorch for sequence-to-sequence modeling?
+73. What is `torch.nn.Embedding`, and how is it used in NLP models?
+74. How do you perform pruning in PyTorch models to reduce size?
+75. How do you train an LSTM model in PyTorch?
+76. Explain the role of `torch.cuda.amp` in mixed-precision training.
+77. How do you optimize memory usage in PyTorch?
+78. What are some common debugging techniques in PyTorch?
+79. How do you profile PyTorch models for performance bottlenecks?
+80. What is `torch.profiler`, and how is it used?
+81. What is `torch.utils.benchmark`, and how do you use it?
+82. What are `Lazy Modules` in PyTorch?
+83. Explain `torch.nn.parallel.DistributedDataParallel` in detail.
+84. How do you train a PyTorch model with TPUs using `torch_xla`?
+85. How do you use PyTorch with ONNX for model deployment?
+86. How do you convert a PyTorch model to TensorRT for inference?
+87. What is `torchserve`, and how do you deploy a model using it?
+88. How do you perform hyperparameter tuning with `Ray Tune` in PyTorch?
+89. How do you use PyTorch for object detection tasks?
+90. How do you use PyTorch for style transfer applications?
+91. Explain the `Detectron2` framework and how it relates to PyTorch.
+92. How do you integrate PyTorch with Hugging Face Transformers?
+93. What is PyTorch Lightning, and how does it simplify model training?
+94. How do you use PyTorch for federated learning?
+95. How do you implement gradient accumulation in PyTorch?
+96. How do you fine-tune BERT using PyTorch?
+97. How do you create a PyTorch model using Swin Transformers?
+98. How do you implement graph neural networks (GNNs) in PyTorch?
+99. How do you use PyTorch for Diffusion models?
+100. How do you debug CUDA errors in PyTorch effectively?
+
+---
+
+This covers all major PyTorch topics, from tensor operations, autograd, datasets, neural networks, optimization, multi-GPU training, quantization, model deployment, transformers, and advanced model architectures. Let me know if you want any modifications! 🚀
